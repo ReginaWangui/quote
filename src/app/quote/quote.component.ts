@@ -13,26 +13,36 @@ import { Quote } from '../module/quote';
      new Quote( 'Do or Do not there is no Try.','Yoda', new Date(2021,2,1),  0,0 ),
      new Quote('Dont stop untill your Proud.', 'Anonymous', new Date(2021,2,1),  0, 0 )
    ]
-//  completeGoal(isComplete, index){
-//    if (isComplete) {
-//      let toDelete = confirm(`Are you sure you want to delete ${this.quote[index].name}?`)
-//      if (toDelete){
-//        this.quote.splice(index,1)
-//      }
-//    }
-//  }
+ completeGoal(isComplete: any, index: number): void{
+   if (isComplete) {
+     let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].name}?`)
+     if (toDelete){
+       this.quotes.splice(index,1)
+     }
+   }
+ }
 
- addNewQuote(quote: Quote){
+ addNewQuote(quote: Quote): void{
    const quoteLength = this.quotes.length;
    quote.date = new Date (quote.date)
-//    quote.id = quoteLength+1;
-//  quote.likes = quoteLength;
+   quote.id = quoteLength+1;
+ quote.like = quoteLength;
   this.quotes.push(quote);
  }
-//  toggleDetails(index){
-// //   this.quote[index].showDescription = !this.quote[index].showDescription;
-// //  }
-  constructor() { }
+//  toggleDetails(): void{
+//   this.quotes[index].showDescription = !this.quotes[index].showDescription;
+//  }
+//   private _QuoteComponent: any.constructorfunction;public get QuoteComponent(): any.constructorfunction {
+//      return this._QuoteComponent;
+//    }
+// public set QuoteComponent(value: any.constructorfunction) {
+//      this._QuoteComponent = value;
+//    }
+ function (): void { }
   ngOnInit(): void {
   }
  }
+
+function ngOnInit(): void {
+     throw new Error('Function not implemented.');
+   }

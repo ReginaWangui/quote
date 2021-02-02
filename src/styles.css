@@ -13,15 +13,9 @@
 
 body {
     margin: 0;
+    background-color: tan;
+    color: teal;
+
 }
 
-.navbar {
-    height: 70px;
-    background-color: #31383f;
-}
 
-.navbar-brand.h1 {
-    color: #fedd89;
-    font-size: 2em;
-    margin-left: .8em;
-}

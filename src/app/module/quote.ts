@@ -1,5 +1,8 @@
 export class Quote {
   showQuote: boolean;
+  id: number | undefined;
+  showDescription: any;
+  name: any;
 
   constructor(
       public text: string,
