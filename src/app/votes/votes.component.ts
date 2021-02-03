@@ -11,22 +11,31 @@ export class VotesComponent implements OnInit {
   numberOfLikes = 0;
   numberOfDislikes = 0;
 
-  @Input()
-  quote!: Quote;
+  @Input()quote!: Quote;
+  @Output()isComplete = new EventEmitter<boolean>();
+  @Output()isRead = new EventEmitter<boolean>();
   @Output() Upvote = new EventEmitter();
+  delete: any;
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+quoteComplete(isComplete:boolean){
+  this.isComplete.emit(isComplete);
+}
 
   likeClick() {
     this.Upvote.emit(this.numberOfLikes);
-    this.numberOfLikes++;
+    this.numberOfLikes+=1;
   }
 
   dislikeClick() {
-    this.numberOfDislikes++;
+    this.numberOfDislikes+=1;
   }
 
+  voteIsCompletetrue(){
+    this.delete+=0;
+  }
+
+constructor(){}
+ngOnInit(): void
+{}
 }
+

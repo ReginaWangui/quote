@@ -10,8 +10,7 @@ import { Quote } from '../module/quote';
   @Output() myData = new EventEmitter()
    quotes:Quote[]=[
      new Quote('Be the change you wish to see in the World.', 'Mahatmam Gandhi', new Date(2021,2,1), 0, 0 ),
-     new Quote( 'Do or Do not there is no Try.','Yoda', new Date(2021,2,1),  0,0 ),
-     new Quote('Dont stop untill your Proud.', 'Anonymous', new Date(2021,2,1),  0, 0 )
+     new Quote( 'Do or Dont there is no Try.','Yoda', new Date(2021,2,1),  0,0 ),
    ]
  completeGoal(isComplete: any, index: number): void{
    if (isComplete) {
