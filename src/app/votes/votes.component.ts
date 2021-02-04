@@ -31,7 +31,7 @@ quoteComplete(isComplete:boolean){
   }
 
   voteIsCompletetrue(){
-    this.delete+=0;
+    this.delete;
   }
 
 constructor(){}
